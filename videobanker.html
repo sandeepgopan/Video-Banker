@@ -1,0 +1,108 @@
+<html>
+
+<link href="video.css" rel="stylesheet">
+<style>
+    background-image: url("");
+</style>
+
+<head>
+    <script src="video.js"></script>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+
+        !function () {
+            var t = window.driftt = window.drift = window.driftt || [];
+            if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                    t.factory = function (e) {
+                        return function () {
+                            var n = Array.prototype.slice.call(arguments);
+                            return n.unshift(e), t.push(n), t;
+                        };
+                    }, t.methods.forEach(function (e) {
+                        t[e] = t.factory(e);
+                    }), t.load = function (t) {
+                        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                        var i = document.getElementsByTagName("script")[0];
+                        i.parentNode.insertBefore(o, i);
+                    };
+            }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('wskykcuvmk9h');
+    </script>
+    <!-- End of Async Drift Code -->
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <!-- OpenTok.js library -->
+        <script src="https://static.opentok.com/v2/js/opentok.js"></script>
+        <script>
+
+            // credentials
+            var apiKey = '45828062';
+            var sessionId = '1_MX40NTgyODA2Mn5-MTU5NTk2NjgxODM1M35jVkpkT1ZNWllDOEVnR1VTMWozdVZGaUZ-UH4';
+            var token = 'T1==cGFydG5lcl9pZD00NTgyODA2MiZzaWc9NTEyNWUwNjM2OTE5NGRlNGY3ZGI5NmQ3OTcwODlkODY2MWVjZTVlZDpzZXNzaW9uX2lkPTFfTVg0ME5UZ3lPREEyTW41LU1UVTVOVGsyTmpneE9ETTFNMzVqVmtwa1QxWk5XbGxET0VWblIxVlRNV296ZFZaR2FVWi1VSDQmY3JlYXRlX3RpbWU9MTU5NTk2OTY5NSZub25jZT0wLjA2MjMzMjY4ODkyMzg0MzgwNCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTk2MDU2MDk1';
+
+            // connect to session
+            var session = OT.initSession(apiKey, sessionId);
+
+            //  publisher
+            var publisher = OT.initPublisher();
+            session.connect(token, function (err) {
+                // publish publisher
+                session.publish(publisher);
+            });
+
+            //  subscriber
+            session.on('streamCreated', function (event) {
+                session.subscribe(event.stream);
+            });
+
+
+        </script>
+        <!-- Start of Async Drift Code -->
+        <script>
+            "use strict";
+
+            !function () {
+                var t = window.driftt = window.drift = window.driftt || [];
+                if (!t.init) {
+                    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                    t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+                        t.factory = function (e) {
+                            return function () {
+                                var n = Array.prototype.slice.call(arguments);
+                                return n.unshift(e), t.push(n), t;
+                            };
+                        }, t.methods.forEach(function (e) {
+                            t[e] = t.factory(e);
+                        }), t.load = function (t) {
+                            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                            var i = document.getElementsByTagName("script")[0];
+                            i.parentNode.insertBefore(o, i);
+                        };
+                }
+            }();
+            drift.SNIPPET_VERSION = '0.3.1';
+            drift.load('wskykcuvmk9h');
+        </script>
+        <!-- End of Async Drift Code -->
+        <div id="videos">
+            <div id="subscriber"></div>
+            <div id="publisher"></div>
+        </div>
+        <button type="submit" onClick="location.href='thankyou.html'" class="btn1">Iam Done</button>
+        <button type="submit" onClick="location.href='thankyou.html'" class="btn2">Cancel</button>
+
+</body>
+
+</html>
